@@ -4,10 +4,10 @@
   
   tasks:
     - name: delete old deployment
-      shell: kubectl delete -f /home/centos/Deployment.yml
+      shell: kubectl delete -f /home/ansadmin/Deployment.yml
     - name: delete old service
-      shell: kubectl delete -f /home/centos/Service.yml
+      shell: kubectl delete -f /home/ansadmin/Service.yml
     - name: create new deployment
-      shell: kubectl apply -f /home/centos/Deployment.yml
+      shell: kubectl apply -f /home/ansadmin/Deployment.yml
     - name: create new service
-      shell: kubectl apply -f /home/centos/Service.yml
+      shell: kubectl apply -f /home/ansadmin/Service.yml
