@@ -1,24 +1,20 @@
+kind: Deploynent
 apiVersion: apps/v1
-kind: Deployment
 metadata:
-  name: webapp
+   name: webapp
 spec:
-  replicas: 2
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-  selector:
+   replicas: 2
+   selector:          #tells the controller which pods to watch/belong to
     matchLabels:
-      app: webapp
-  template:
-    metadata:
-      labels:
-        app: webapp
-    spec:
+     app: webapp
+   template:
+      metadata:
+        labels:
+          app: webapp
+      spec:
       containers:
-      - image: bhanudevops106/project-webapp
-        name: webapp
+      - name: webapp
+        image: bhanudevops106/project-webapp
+        imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 80
