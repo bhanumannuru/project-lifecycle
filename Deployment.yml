@@ -20,6 +20,5 @@ spec:
       containers:
       - image: bhanudevops106/project-webapp
         name: webapp
-        iamgePullPolicy: Always
         ports:
         - containerPort: 8080
