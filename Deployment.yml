@@ -13,8 +13,8 @@ spec:
           app: webapp
       spec:
       containers:
-      - name: webapp
-        image: bhanudevops106/project-webapp
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
+       - name: webapp
+         image: bhanudevops106/project-webapp
+         imagePullPolicy: Always
+         ports:
+         - containerPort: 80
