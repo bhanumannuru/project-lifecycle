@@ -5,8 +5,8 @@
     - name: create new deployment
       shell: kubectl apply -f /home/centos/Deployment.yml
       args:
-        executable: /bin/bash
+        executable: /tmp
     - name: create new service
       shell: kubectl apply -f /home/centos/Service.yml
       args:
-        executable: /bin/bash
+        executable: /tmp
