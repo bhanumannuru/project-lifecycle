@@ -4,10 +4,10 @@
   user: ansadmin
   
   tasks:
-  - name: delete old deployment
-    command: kubectl delete -f /home/ansadmin/Deployment.yml
-  - name: delete old service
-    command: kubectl delete -f /home/ansadmin/Service.yml
+#  - name: delete old deployment
+#    command: kubectl delete -f /home/ansadmin/Deployment.yml
+#  - name: delete old service
+#    command: kubectl delete -f /home/ansadmin/Service.yml
   - name: create new deployment
     command: kubectl apply -f /home/ansadmin/Deployment.yml
   - name: create new service
