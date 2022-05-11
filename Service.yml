@@ -1,14 +1,14 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name: webapp
+  name: bhanu-service
   labels:
-    app: webapp
+    app: webapp-devops-project
 spec:
+  selector:
+    app: webapp-devops-project
+  type: LoadBalancer
   ports:
     - port: 8080
-      targetPort: 80
-     # nodePort: 31200
-  selector:
-    app: webapp
-  type: LoadBalancer
+      targetPort: 8080
+      nodePort: 31200
