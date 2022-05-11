@@ -1,11 +1,11 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: webapp-deployment
+  name: webapp
 spec:
   selector:
     matchLabels:
-      app: webapp-devops-project
+      app: webapp
   replicas: 2 # tells deployment to run 2 pods matching the template
   strategy:
     type: RollingUpdate
@@ -16,10 +16,10 @@ spec:
   template:
     metadata:
       labels:
-        app: webapp-devops-project
+        app: webapp
     spec:
       containers:
-      - name: webapp-devops-project
+      - name: webapp
         image: bhanudevops106/project-webapp
         imagePullPolicy: Always
         ports:
